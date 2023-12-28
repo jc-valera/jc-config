@@ -1,0 +1,37 @@
+[user]
+  	email = 
+	name = 
+
+[alias]
+	cl = clone
+		
+  	st = status
+	sts = status -sb
+  
+	ccm = checkout main
+  	cc = checkout
+		
+	aa = add --all
+  	ci = commit -m
+
+  	br = branch
+
+  	po = push origin
+	ps = push
+	pl = pull
+	
+	me = merge
+
+	di = diff
+	dv = difftool -t vimdiff -y
+
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  	last = log -1 HEAD --stat
+	logTree = log --graph --decorate --all
+
+  	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	
+[init]
+	defaultBranch = main
+[gui]
+	recentrepo = 
