@@ -13,9 +13,12 @@ So. this is my custom for the git bash terminal
 
 This is the default git bash terminal 
 
+![bash_simple](https://github.com/jc-valera/jc-config/assets/56094123/d80ef06f-c096-4098-8e33-fdf8dc2d5e15)
 
 
 and I modified to this
+
+![image](https://github.com/jc-valera/jc-config/assets/56094123/93181b25-5366-4377-9c9d-42787f504746)
 
 
 
