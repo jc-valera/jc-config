@@ -2,6 +2,7 @@
 # creates his/her own .bashrc/.bash_profile
 
 # --show-control-chars: help showing Korean or accented characters
+#NAVIGATION
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -14,7 +15,13 @@ alias ll.='ls -la'
 alias lls='ls -la --sort=size'
 alias llt='ls -la --sort=time'
 
-alias work='cd /d/Users/jcvalera/Documents/Projects/'
+#COMMON DIRECTORIES
+alias dt='cd /d/Users/jcvelazquez/Desktop'
+alias dl='cd /d/Users/jcvelazquez/Downloads'
+alias dc='cd /d/Users/jcvelazquez/Documents'
+alias home="cd ~"
+alias work='cd /d/Users/jcvelazquez/Documents/Projects'
+
 alias countFiles='ls -1 | wc -l'
 
 case "$TERM" in

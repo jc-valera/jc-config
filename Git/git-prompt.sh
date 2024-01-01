@@ -9,14 +9,17 @@ if test -f ~/.config/git/git-prompt.sh
 then
 	. ~/.config/git/git-prompt.sh
 else
-	# Custom prompt settings
-	PROMPT_DIRTRIM=4                         # Shorten deep paths in the prompt
+	PROMPT_DIRTRIM=4		# Shorten deep paths in the prompt
 	PS1='\[\033]0;Git | Bash v\v | \W\007\]' # set window title
-	PS1="$PS1"'\n'                           # new line
-	# PS1="$PS1"'\[\033[30;45m\] [\A] '        # black text, magenta, 24h time
-	PS1="$PS1"'\[\033[30;42m\] \u '          # black text, green, user
-	# PS1="$PS1"'\[\033[30;42m\]@\h '          # black text, green, @host
-	PS1="$PS1"'\[\033[30;43m\] \w '          # black text, yellow, working director
+	PS1="$PS1"'\n'                 	# new line
+	PS1="$PS1"'\[\033[32m\]'       	# change to green
+	PS1="$PS1"'\u '             	# user@host<space>
+	PS1="$PS1"'\[\033[35m\]'       	# change to purple
+	# PS1="$PS1"'▶ '
+	PS1="$PS1"'➜ '
+	PS1="$PS1"'\[\033[33m\]'       # change to brownish yellow
+	PS1="$PS1"'\w'                 # current working directory
+	
 	if test -z "$WINELOADERNOEXEC"
 	then
 		GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
@@ -27,27 +30,14 @@ else
 		then
 			. "$COMPLETION_PATH/git-completion.bash"
 			. "$COMPLETION_PATH/git-prompt.sh"
-			PS1="$PS1"'\[\033[30;45m\]'  # white text, cyan
-			PS1="$PS1"'`__git_ps1`'      # bash function
+			PS1="$PS1"'\[\033[36m\]'  # change color to cyan
+			PS1="$PS1"'`__git_ps1`'   # bash function
 		fi
 	fi
 	PS1="$PS1"'\[\033[0m\]'        # change color
 	PS1="$PS1"'\n'                 # new line
-	PS1="$PS1"'$ '                 # prompt: always $
-	
-	# Git status options
-	# Shows * or + for unstaged and staged changes, respectively.
-	export GIT_PS1_SHOWSTASHSTATE=true
+	PS1="$PS1"'❯ '                 # prompt: always ❯
 
-	# shows $ if there are any stashes.
-	export GIT_PS1_SHOWDIRTYSTATE=true
-
-	# Shows % if there are any untracked files.
-	export GIT_PS1_SHOWUNTRACKEDFILES=true
-
-	# shows <, >, <>, or = when your branch is behind, ahead, diverged from,
-	# or in sync with the upstream branch, respectively.
-	export GIT_PS1_SHOWUPSTREAM="auto"
 fi
 
 MSYS2_PS1="$PS1"               # for detection by MSYS2 SDK's bash.basrc
@@ -62,3 +52,17 @@ then
 		. "$c"
 	done
 fi
+
+# Git status options
+# Shows * or + for unstaged and staged changes, respectively.
+export GIT_PS1_SHOWSTASHSTATE=true
+
+# shows $ if there are any stashes.
+export GIT_PS1_SHOWDIRTYSTATE=true
+
+# Shows % if there are any untracked files.
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+
+# shows <, >, <>, or = when your branch is behind, ahead, diverged from,
+# or in sync with the upstream branch, respectively.
+export GIT_PS1_SHOWUPSTREAM="auto"
