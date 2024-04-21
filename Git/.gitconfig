@@ -16,7 +16,7 @@
 
   	br = branch
 
-  	po = push origin
+  	po = push -u origin
 	ps = push
 	pl = pull
 	
@@ -33,5 +33,3 @@
 	
 [init]
 	defaultBranch = main
-[gui]
-	recentrepo = 
