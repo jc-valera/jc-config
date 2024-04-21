@@ -16,12 +16,13 @@ alias lls='ls -la --sort=size'
 alias llt='ls -la --sort=time'
 
 #COMMON DIRECTORIES
-alias dt='cd /d/Users/jcvelazquez/Desktop'
-alias dl='cd /d/Users/jcvelazquez/Downloads'
-alias dc='cd /d/Users/jcvelazquez/Documents'
+alias dt='cd /d/Users/jcvalera/Desktop'
+alias dl='cd /d/Users/jcvalera/Downloads'
+alias dc='cd /d/Users/jcvalera/Documents'
 alias home="cd ~"
-alias work='cd /d/Users/jcvelazquez/Documents/Projects'
-alias repos='cd /d/Users/jcvelazquez/source/repos'
+alias work='cd /d/Users/jcvalera/Documents/Projects'
+alias repos='cd /d/Users/jcvalera/Documents/Projects/Git'
+# alias repos='cd /d/Users/jcvalera/source/repos'
 
 alias countFiles='ls -1 | wc -l'
 
